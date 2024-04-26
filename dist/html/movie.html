@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title></title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200..900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../style.css">
+   <script src="../main.js" defer></script>
+</head>
+
+<body>
+   <main>
+      <article class="menu">
+         <ul>
+            <li>
+               <input checked type="radio" name="category" id="films">
+               <label for="films">Фильмы</label>
+            </li>
+            <li>
+               <input type="radio" name="category" id="serials">
+               <label for="serials">Сериалы</label>
+            </li>
+         </ul>
+      </article>
+      <article class="body">
+         <div class="body__header">
+            <div class="body__search search">
+               <input placeholder="Название фильма, сериала или имя актёра" type="text">
+               <button><img src="../img/search.svg" alt="icon search"></button>
+            </div>
+         </div>
+         <div class="body__movie movie">
+            <h2></h2>
+            <ul>
+               <li class="duration">
+                  <p class="value"></p>
+                  <p class="property">Продолжительность</p>
+               </li>
+               <li class="rating">
+                  <p class="value"></p>
+                  <p class="property">Рэйтинг imdb</p>
+               </li>
+               <li class="country">
+                  <p class="value"></p>
+                  <p class="property">Страна</p>
+               </li>
+               <li class="producer">
+                  <p class="value"></p>
+                  <p class="property">Режиссёр</p>
+               </li>
+            </ul>
+            <video controls preload="metadata">
+            </video>
+         </div>
+      </article>
+   </main>
+</body>
+
+</html>

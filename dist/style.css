@@ -1,0 +1,285 @@
+/* ----обнуление и общие стили---- */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+html,
+body {
+   font-family: "Source Sans 3", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+   background-color: #06467E;
+   font-size: 1rem;
+}
+body {
+	line-height: 1;
+	text-rendering: optimizeLegibility;
+   position: relative;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+input,
+button,
+textarea {
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+a {
+	color: inherit;
+}
+a:link,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+/* -------- */
+
+main {
+   display: grid;
+   grid-template-columns: 1fr 5fr;
+   color: #F0EFE9;
+   min-height: 100vh;
+}
+
+.menu {
+   background-color: #0A1F45;
+   padding-left: 40px;
+   padding-right: 20px;
+}
+
+.menu ul {
+   margin-top: 150px;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   font-size: 1.75rem;
+   color: #F0EFE9;
+   position: sticky;
+   top: 50px;
+}
+
+.menu li {
+   position: relative;
+}
+
+.menu input[type="radio"] {
+   opacity: 0;
+   visibility: hidden;
+   width: 100%;
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+
+.menu input[type='radio'] + label {
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.menu input[type='radio'] + label:hover {
+   font-size: 2rem;
+   color: #9A1325;
+}
+
+.menu input[type='radio']:checked + label {
+   font-size: 2rem;
+   color: #13A4D2;
+}
+
+.body {
+   width: 100%;
+   padding: 0 20px;
+}
+
+/* -------- */
+.body__header {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100px;
+   margin-bottom: 50px;
+}
+
+.search {
+   width: 100%;
+   position: relative;
+   min-height: 50px;
+}
+
+.search input {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: #0A1F45;
+   border-radius: 10px;
+   left: 0;
+   top: 0;
+   color: #F0EFE9;
+   font-size: 1.5rem;
+   padding: 0 20px;
+}
+
+.search input::placeholder {
+   opacity: 0.5;
+}
+
+.search input:focus {
+   border: #13A4D2 2px solid;
+}
+.search button {
+   position: absolute;
+   right: 20px;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+/* -------- */
+
+.gallery {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+   width: 100%;
+}
+
+.gallery__poster {
+   background-color: #0A1F45;
+   overflow: hidden;
+   border-radius: 5px 5px 0 0;
+   position: relative;
+}
+
+.poster {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   padding-bottom: 15px;
+}
+
+.poster > *:not(img) {
+   padding: 0 20px;
+}
+
+.poster > img {
+   aspect-ratio: 369/553;
+}
+
+.poster a {
+   font-size: 2rem;
+   cursor: pointer;
+   transition: color .2s ease;
+
+   &:hover {
+      color: #13A4D2;
+      transition: color .4s ease;
+   }
+}
+
+.poster > p {
+   font-size: 1.4rem;
+}
+
+.poster__bottom {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 15px;
+   font-size: 1.4rem;
+}
+
+.raiting {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 10px;
+   color: #13A4D2;
+}
+
+/* -------- */
+
+.movie {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 25px;
+}
+
+.movie > h2 {
+   font-weight: 600;
+   font-size: 3.4rem;
+}
+
+.movie > ul {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 35px;
+   font-size: 1.75rem;
+}
+
+.movie ul > li {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-weight: 500;
+   line-height: 120%;
+}
+
+.movie li p:last-child {
+   opacity: .6;
+}
+
+.movie li p:first-child {
+   cursor: pointer;
+   transition: color .2s ease;
+
+   &:hover {
+      transition: color .4s ease;
+      color: #13A4D2;
+   }
+}
+
+.movie video {
+   width: 100%;
+}
