@@ -102,28 +102,17 @@ main {
    position: relative;
 }
 
-.menu input[type="radio"] {
-   opacity: 0;
-   visibility: hidden;
-   width: 100%;
-   position: absolute;
-   left: 0;
-   top: 0;
-}
-
-.menu input[type='radio'] + label {
-   cursor: pointer;
+.menu a {
    transition: all 0.3s ease;
+   font-size: 2rem;
 }
 
-.menu input[type='radio'] + label:hover {
-   font-size: 2rem;
-   color: #9A1325;
-}
-
-.menu input[type='radio']:checked + label {
-   font-size: 2rem;
+.menu a[data-active='true'] {
    color: #13A4D2;
+}
+
+.menu a[data-active='false']:hover {
+   color: #9A1325;
 }
 
 .body {
