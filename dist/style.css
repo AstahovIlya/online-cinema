@@ -92,7 +92,7 @@ main {
    display: flex;
    flex-direction: column;
    gap: 15px;
-   font-size: 1.75rem;
+   font-size: clamp(1rem, 20vw, 1.75rem);
    color: #F0EFE9;
    position: sticky;
    top: 50px;
@@ -104,7 +104,7 @@ main {
 
 .menu a {
    transition: all 0.3s ease;
-   font-size: 2rem;
+   font-size: clamp(1rem, 5vw, 2rem);
 }
 
 .menu a[data-active='true'] {
@@ -166,9 +166,21 @@ main {
 
 .gallery {
    display: grid;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: repeat(2, 1fr);
    gap: 20px;
    width: 100%;
+}
+
+@media (min-width: 1024px) {
+   .gallery {
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+@media (min-width: 1200px) {
+   .gallery {
+      grid-template-columns: repeat(4, 1fr);
+   }
 }
 
 .gallery__poster {
@@ -197,6 +209,7 @@ main {
    font-size: 2rem;
    cursor: pointer;
    transition: color .2s ease;
+   flex: auto;
 
    &:hover {
       color: #13A4D2;
@@ -269,6 +282,7 @@ main {
    }
 }
 
-.movie video {
+.movie iframe {
    width: 100%;
+   aspect-ratio: 2/1;
 }
